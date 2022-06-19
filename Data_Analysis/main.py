@@ -8,7 +8,7 @@ pd.set_option('display.max_columns', 20)
 
 
 # csv 파일 읽어와서 dataframe으로 저장
-df_covid = pd.read_csv('데이터 파일 경로를 넣어주세요')
+df_covid = pd.read_csv('D:\\Github_Clone\\Python\\Data_Analysis')
 print(df_covid)
 
 
@@ -29,10 +29,10 @@ df_top10_countries_dr = df_countries_cases[df_countries_cases['Deaths'] >= 1000]
 print(df_top10_countries_dr)
 
 
-# # 사망률 바 그래프
-# plt.barh(df_top10_countries_dr.index, df_top10_countries_dr['Death Rate (Per 100)'], color="darkcyan")
-# plt.tick_params(size=5, labelsize=11)
-# plt.xlabel("Death Rate (Per 100)", fontsize=14)
-# plt.title("Top 10 Countries by Death Rate", fontsize=18)
-# plt.grid(alpha=0.3)
-# plt.show()
+# 사망률 바 그래프
+plt.barh(df_top10_countries_dr.index, df_top10_countries_dr['Death Rate (Per 100)'], color="darkcyan")
+plt.tick_params(size=5, labelsize=11)
+plt.xlabel("Death Rate (Per 100)", fontsize=14)
+plt.title("Top 10 Countries by Death Rate", fontsize=18)
+plt.grid(alpha=0.3)
+plt.show()

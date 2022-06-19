@@ -1,10 +1,11 @@
 def is_palindrome(word):
     # 코드를 입력하세요.
-    for i in range(word):
-        if word[i] == word[range(word) - 1]:
-            return True
-        else:
+    for left in range(len(word) // 2):
+        right = len(word) - left - 1
+        if word[left] != word[right]:
             return False
+    return True
+
 
 # 테스트
 print(is_palindrome("racecar"))
