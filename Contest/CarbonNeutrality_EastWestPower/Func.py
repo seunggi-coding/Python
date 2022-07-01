@@ -73,5 +73,17 @@ def Five_VehicleSystem(car_num):
                 print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
             break
 
+def People_car():
+    people = [[""], [""], [""], [""]]
+    car = [[0], [0], [0], [0]]
+    people_car_list = [["", 0], ["", 0], ["", 0], ["", 0], ]
+
+    for i in range(4):
+        people[i] = random.choice('ABCDEFGHIZKLM')
+        car[i] = random.randint(0, 9)
+        people_car_list[i] = [people[i], car[i]]
+
+    return people_car_list
+
 
 
