@@ -23,17 +23,33 @@ def Five_VehicleSystem(day2, people, car_num, point):
                 if (day2=="1" or day2=="6" or day2=="11" or day2=="16" or day2=="21" or day2=="26" or day2=="31"):
                     print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
                 else:
-                    print("{}님 차량 5부제를 장려해주셔서 감사합니다. 복지포인트가 1p 적립되었습니다.\n".format(people))
-                    print("총 복지포인트는 {}포인트 입니다.".format(point))
-           elif(car_num == 2 or car_num == 7) and (day2=="2" or day2=="7" or day2=="12" or day2=="17" or day2=="22" or day2=="27"):
-               print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
-           elif(car_num == 3 or car_num == 8) and (day2=="3" or day2=="8" or day2=="13" or day2=="18" or day2=="23" or day2=="28"):
-               print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
-           elif(car_num == 4 or car_num == 9) and (day2=="4" or day2=="9" or day2=="14" or day2=="19" or day2=="24" or day2=="29"):
-               print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
-           elif(car_num == 5 or car_num == 0) and (day2=="5" or day2=="10" or day2=="15" or day2=="20" or day2=="25" or day2=="30"):
-               print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
-           break
+                    print("{}님 차량 5부제 날짜는 1, 6, 11, 16, 21, 26, 31일 입니다. 해당 날짜에 대중교통 이용 부탁드립니다.\n".format(people))
+                    print("현재 적립되어 있는 복지포인트는 {}포인트 입니다.".format(point))
+            elif(car_num == 2 or car_num == 7):
+                if (day2=="2" or day2=="7" or day2=="12" or day2=="17" or day2=="22" or day2=="27"):
+                    print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
+                else:
+                    print("{}님 차량 5부제 날짜는 2, 7, 12, 17, 22, 27일 입니다. 해당 날짜에 대중교통 이용 부탁드립니다.\n".format(people))
+                    print("현재 적립되어 있는 복지포인트는 {}포인트 입니다.".format(point))
+            elif(car_num == 3 or car_num == 8):
+                if (day2=="3" or day2=="8" or day2=="13" or day2=="18" or day2=="23" or day2=="28"):
+                    print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
+                else:
+                    print("{}님 차량 5부제 날짜는 3, 8, 13, 18, 23, 28일 입니다. 해당 날짜에 대중교통 이용 부탁드립니다.\n".format(people))
+                    print("현재 적립되어 있는 복지포인트는 {}포인트 입니다.".format(point))
+            elif(car_num == 4 or car_num == 9):
+                if (day2=="4" or day2=="9" or day2=="14" or day2=="19" or day2=="24" or day2=="29"):
+                    print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
+                else:
+                    print("{}님 차량 5부제 날짜는 4, 9, 14, 19, 24, 29일 입니다. 해당 날짜에 대중교통 이용 부탁드립니다.\n".format(people))
+                    print("현재 적립되어 있는 복지포인트는 {}포인트 입니다.".format(point))
+            elif(car_num == 5 or car_num == 0):
+                if (day2=="5" or day2=="10" or day2=="15" or day2=="20" or day2=="25" or day2=="30"):
+                    print("오늘은 {}일 이므로 차량번호 끝자리가 {}인 차량의 이용을 자제해 주시면 감사하겠습니다.".format(day2, car_num))
+                else:
+                    print("{}님 차량 5부제 날짜는 1, 6, 11, 16, 21, 26, 31일 입니다. 해당 날짜에 대중교통 이용 부탁드립니다.\n".format(people))
+                    print("현재 적립되어 있는 복지포인트는 {}포인트 입니다.".format(point))
+            break
 
     elif month == 4 or  month == 6 or month == 9 or month == 11:
         for i in range(1, 30):
@@ -67,12 +83,13 @@ def Five_VehicleSystem(day2, people, car_num, point):
 def People_car():
     people = [[""], [""], [""], [""]]
     car = [[0], [0], [0], [0]]
+    point = [[0], [0], [0], [0]]
     people_car_list = [["", 0], ["", 0], ["", 0], ["", 0], ]
 
     for i in range(4):
         people[i] = random.choice('ABCDEFGHIZKLM')
         car[i] = random.randint(0, 9)
-        people_car_list[i] = [people[i], car[i]]
+        people_car_list[i] = [people[i], car[i], point[i]]
 
     return people_car_list
 

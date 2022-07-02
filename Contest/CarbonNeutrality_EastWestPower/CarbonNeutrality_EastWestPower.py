@@ -9,5 +9,5 @@ day2 = input("오늘은 몇일인가요? ")
 for j in range(4) :
     ex_park = list_park[j]
     print(ex_park)
-    vs(day2, ex_park[0], ex_park[1])
+    vs(day2, ex_park[0], ex_park[1], ex_park[2])
     print("\n")
